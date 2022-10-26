@@ -95,9 +95,9 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     onPressed: () {
-                      _todoController.text.isNotEmpty
-                          ? _todoController.text
-                          : null;
+                      if(_todoController.text.isNotEmpty){
+                       _addToDoItem(_todoController.text);
+                      }
                     },
                     style: ElevatedButton.styleFrom(
                         primary: tdBlue,
